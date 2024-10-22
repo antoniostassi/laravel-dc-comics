@@ -14,7 +14,7 @@ class ComicController extends Controller
     public function index()
     {
         $comics = Comic::get(); // Cattura tutti i dati dal DB nella tabella Comics.
-        return view('comics.index', compact('comics'));
+        return view('comics.index', compact('comics')); // Mostrami la pagina index nella cartella view/comics passandogli $comics
     }
 
     /**
@@ -28,7 +28,7 @@ class ComicController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request) // post
     {
         //
     }
@@ -52,7 +52,7 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id) // post
     {
         //
     }
