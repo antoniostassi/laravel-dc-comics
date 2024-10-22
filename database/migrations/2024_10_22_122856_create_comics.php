@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('title', 64);
             $table->string('description', 1024);
-            $table->string('thumb', 1024);
+            $table->string('thumb', 1024)->nullable();
             $table->float('price');
             $table->string('series', 64);
-            $table->date('sale_date');
-            $table->string('type', 30);
-            $table->json('artists');
-            $table->json('writers');
+            $table->date('sale_date')->nullable();
+            $table->string('type', 30)->nullable();
+            $table->json('artists')->nullable();
+            $table->json('writers')->nullable();
             $table->timestamps();
         });
     }
