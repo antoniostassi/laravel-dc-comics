@@ -33,9 +33,9 @@ class ComicController extends Controller
     {
         //
         $data = $request->all();
-
+        
         $newComic = new Comic;
-
+    
             $newComic->title = $data['title'];
             $newComic->description = $data['description'];
             $newComic->thumb = $data['thumb'];
@@ -44,6 +44,14 @@ class ComicController extends Controller
             $newComic->sale_date = $data['sale_date'];
             $newComic->type = $data['type'];
 
+            // Arrays Setup 
+            // With array_filter we ensure to remove all null values ( it happens if the customer send an empty field )
+            $newArtists = array_filter($request->author); 
+            $newWriters = array_filter($request->writer);
+
+            $newComic->artists = json_encode($newArtists);
+            $newComic->writers = json_encode($newWriters);
+            
             $newComic->save();
 
         return redirect()->route('comics.show', $newComic->id);
