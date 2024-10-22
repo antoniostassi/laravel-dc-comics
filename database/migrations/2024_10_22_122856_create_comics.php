@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 64);
             $table->string('description', 1024);
-            $table->smallInteger('price')->signed();
+            $table->float('price');
             $table->string('series', 64);
             $table->date('sale_date');
             $table->string('type', 30);
