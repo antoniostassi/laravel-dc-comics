@@ -21,19 +21,29 @@
             <div class="col-6">
                 <div class="artists p-3">
                     <h5>Artists:</h5>
-                    <?php $artistsList = json_decode($comic->artists); ?>
+                    <?php $artistsList = json_decode($comic->artists); 
+                    
+                    if ($artistsList) {
+                    ?>
                     @foreach ($artistsList as $artist)
                         <p>{{ $artist }}</p>
                     @endforeach
+                    <?php }?>
                 </div>
             </div>
             <div class="col-6">
                 <div class="writers p-3">
+                    
                     <h5>Writers:</h5>
-                    <?php $writersList = json_decode($comic->writers); ?>
+                    <?php $writersList = json_decode($comic->writers); 
+                    if ($artistsList) {
+                        ?>
                     @foreach ($writersList as $writer)
                         <p>{{ $writer }}</p>
                     @endforeach
+                    <?php }
+                    ?>
+
                 </div>
             </div>
         </div>
