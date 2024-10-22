@@ -57,12 +57,12 @@
         </div>
 
         <div class="mb-3">
-            <label for="writers" class="form-label">
+            <label for="writer" class="form-label">
                 Scrittore
                 <button id="add-writers-input" class="btn btn-success mb-1 px-1 py-0">+</button>
             </label>
             <div id="writers">
-                <input type="text" class="form-control" id="writers-1" name="writers" maxlength="30" placeholder="Inserisci lo scrittore...">
+                <input type="text" class="form-control" id="writers-1" name="writer" maxlength="30" placeholder="Inserisci lo scrittore...">
             </div>
         </div>
 
