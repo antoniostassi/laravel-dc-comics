@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('main_content')
+    <div class="btn btn-success m-2">
+        <a href="{{ route('comics.create') }}">+ Comic</a>
+    </div>
     @foreach ($comics as $item)
     <ul>
         <li>
@@ -9,3 +12,13 @@
     </ul>
     @endforeach
 @endsection
+
+<style> 
+
+    .btn > a { 
+        text-decoration:none !important;
+        color:white !important;
+        font-size:0.9rem;
+    }
+
+</style>
