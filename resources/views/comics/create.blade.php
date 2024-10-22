@@ -52,7 +52,7 @@
                 <button id="add-author-input" class="btn btn-success mb-1 px-1 py-0">+</button>
             </label>
             <div id="author">
-                <input type="text" class="form-control" id="author-1" name="author" maxlength="30" placeholder="Inserisci l'artista...">
+                <input type="text" class="form-control" name="author[]" maxlength="30" placeholder="Inserisci l'artista...">
             </div>
         </div>
 
@@ -62,7 +62,7 @@
                 <button id="add-writers-input" class="btn btn-success mb-1 px-1 py-0">+</button>
             </label>
             <div id="writers">
-                <input type="text" class="form-control" id="writers-1" name="writer" maxlength="30" placeholder="Inserisci lo scrittore...">
+                <input type="text" class="form-control" name="writer[]" maxlength="30" placeholder="Inserisci lo scrittore...">
             </div>
         </div>
 
