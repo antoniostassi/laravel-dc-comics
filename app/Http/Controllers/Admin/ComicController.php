@@ -36,9 +36,10 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Comic $comic)
     {
         //
+        return view('comics.show', compact('comic')); // Mostra la pagina "comics/show.blade.php" e lascia la variabile $comic che corrisponde al valore Comic corrispondente alla primary key passata in argomento.
     }
 
     /**
