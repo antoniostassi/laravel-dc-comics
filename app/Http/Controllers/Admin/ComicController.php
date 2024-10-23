@@ -69,17 +69,38 @@ class ComicController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Comic $comic)
     {
         //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id) // post
+    public function update(Request $request, Comic $comic) // post
     {
+        $data = $request->all();
         //
+        $comic->title = $data['title'];
+        $comic->description = $data['description'];
+        $comic->thumb = $data['thumb'];
+        $comic->price = $data['price'];
+        $comic->series = $data['series'];
+        $comic->sale_date = $data['sale_date'];
+        $comic->type = $data['type'];
+
+        // Arrays Setup 
+        // With array_filter we ensure to remove all null values ( it happens if the customer send an empty field )
+        $newArtists = array_filter($request->author); 
+        $newWriters = array_filter($request->writer);
+
+        $comic->artists = json_encode($newArtists);
+        $comic->writers = json_encode($newWriters);
+
+        $comic->save();
+        dd("Update completed");
+
     }
 
     /**
