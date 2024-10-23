@@ -17,6 +17,6 @@ use App\Http\Controllers\Guest\MainController;
 use App\Http\Controllers\Admin\ComicController;
 
 
-Route::get('/', [MainController::class, 'index']);
+Route::get('/', [ComicController::class, 'index']);
 
 Route::resource('comics', ComicController::class);
