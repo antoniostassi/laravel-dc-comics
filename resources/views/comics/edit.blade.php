@@ -1,11 +1,11 @@
 @extends('layouts.app')
-@section('page-title') New Comic @endsection
+@section('page-title') Edit Comic @endsection
 
 @section('main_content')
 
 <div class="container p-3">
 
-    <h3 class="text-center">Crea un Nuovo Comic</h3>
+    <h3 class="text-center">Modifica Comic</h3>
     <form action="{{ route('comics.update', $comic->id)}}" method="POST">
 
         @csrf <!-- Permette al form di essere autorizzato a mandare richieste POST -->
