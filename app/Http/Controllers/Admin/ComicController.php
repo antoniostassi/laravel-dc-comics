@@ -99,7 +99,7 @@ class ComicController extends Controller
         $comic->writers = json_encode($newWriters);
 
         $comic->save();
-        dd("Update completed");
+        return redirect()->route('comics.show', $comic->id);
 
     }
 
