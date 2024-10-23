@@ -9,6 +9,7 @@
         <li>
             <a href="{{ route('comics.show', $item->id) }}">{{ $item->id }} - {{ $item->title }}</a>
             <a class="btn btn-success" href="{{ route('comics.edit', $item->id) }}"> Modifica </a>
+            <a class="btn btn-danger" href="{{ route('comics.destroy', $item->id) }}"> Elimina </a>
         </li>
     </ul>
     @endforeach
